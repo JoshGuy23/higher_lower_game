@@ -8,7 +8,8 @@ def intro():
     print(art.logo)
 
 def deconstruct_dictionaries(choice_a, choice_b, score):
-    name_a = choice_a["name"] # put all this into a function
+    """Deconstructs the data from game data and gets the user to choose which data has more followers."""
+    name_a = choice_a["name"]
     name_b = choice_b["name"]
     description_a = choice_a["description"]
     description_b = choice_b["description"]
@@ -24,6 +25,7 @@ def deconstruct_dictionaries(choice_a, choice_b, score):
     return result
 
 def choice(f_count_a, f_count_b, p_score):
+    """User chooses which entity has more followers."""
     answer = ""
     if f_count_a > f_count_b:
         answer = "a"
@@ -39,6 +41,7 @@ def choice(f_count_a, f_count_b, p_score):
         return 0
 
 def game():
+    """Main game of higher or lower."""
     playing = True
     score = 0
     while playing:
