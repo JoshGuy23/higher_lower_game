@@ -1,6 +1,7 @@
 import art
 import game_data
 import random
+import os
 
 def intro():
     """Displays intro ASCII art"""
@@ -42,8 +43,8 @@ def game():
     playing = True
     score = 0
     while playing:
-        
         intro()
+        
         compare_a = random.choice(game_data.data)
         compare_b = random.choice(game_data.data)
         while compare_b == compare_a:
@@ -54,3 +55,7 @@ def game():
         score += result
         if result == 0:
             playing = False
+        os.system("cls" if os.name == "nt" else "clear")
+    print(f"Sorry, that's wrong. Final score: {score}.")
+    
+game()
