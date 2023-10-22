@@ -34,7 +34,6 @@ def choice(f_count_a, f_count_b, p_score):
     
     guess = input("Who has more followers? Type 'A' or 'B': ").lower()
     if guess == answer or answer == "c":
-        print(f"You're right! Current score: {p_score + 1}.")
         return 1
     else:
         return 0
@@ -45,6 +44,8 @@ def game():
     while playing:
         intro()
         
+        if score > 0:
+            print(f"Youre right! Current score: {score}.")
         compare_a = random.choice(game_data.data)
         compare_b = random.choice(game_data.data)
         while compare_b == compare_a:
