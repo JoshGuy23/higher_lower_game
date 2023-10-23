@@ -23,7 +23,7 @@
   <ItemGroup>
     <Compile Include="art.py" />
     <Compile Include="game_data.py" />
-    <Compile Include="higher_lower_game.py" />
+    <Compile Include="main.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
